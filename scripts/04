@@ -1,0 +1,18 @@
+#!/bin/sh
+changef="/etc/crontab"
+file="/var/log/crontab_change.log"
+sha_sum_o="Nothingness and abyss"
+log="/var/log/crontab_script.log"
+if [ -f "$file" ]
+then
+	sha_sum_o="$(cat $file)"
+fi
+cur="$(sha512sum $changef)"
+if [ "$cur" = "$sha_sum_o" ]
+then
+	echo "File(s) were not chaned" >> "$log"
+else
+	echo "Current crontab file was changed. Please be advised" | mail -s "Crontab Change" root
+	echo "File(s) were changed. Email to root was sent." >> "$log"
+	echo "$cur" > "$file"
+fi

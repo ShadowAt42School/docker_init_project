@@ -1,0 +1,7 @@
+In this file you can store as many PUBLIC keys as you like and let people with corresponding private key connect to the machine
+$HOME/.ssh/authorized_keys
+~/.ssh/authorized_keys
+
+
+Files that will hold YOUR keys are stored in ~/.ssh/indentetity and ~/.ssh/identity.pub in v1 ssh and
+in v2 ssh ~/.ssh/id_rsa and ~/.ssh/id_rsa.pub

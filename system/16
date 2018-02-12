@@ -1,0 +1,3 @@
+cron is a system that keeps schedule
+
+system that feed jobs to cron is crontab

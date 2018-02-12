@@ -1,0 +1,2 @@
+Command: dig -x 10.51.1.81 +short
+Result: dpm-master.42.us.org
