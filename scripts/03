@@ -1,2 +1,12 @@
 #!/bin/sh
-ls -laS $1
+if [ $# != 1 ]
+then
+	echo "Usage: ./03 <directory>"
+	exit 0
+fi
+if [ -d $1 ]
+then
+	du -sh $1/* | sort -h
+	exit 0
+fi
+echo "No such directory"

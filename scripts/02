@@ -1,4 +1,4 @@
 #!/bin/sh
-#crontab -e, then add scheduled task in crontab: 0 4 * * Sun /bin/sh $HOME/scripts/02
+#crontab -e, then add scheduled task in crontab: 0 4 * * Sun /bin/sh $HOME/[folder]/scripts/02
 #if you wish to have this script running in global cron, add this command to /etc/crontab under root or sudo
 (/usr/bin/apt-get update -y && /usr/bin/apt-get upgrade -y) >> /var/log/update_script.log

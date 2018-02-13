@@ -15,7 +15,7 @@ fi
 cur="$(sha512sum $changef)"
 if [ "$cur" = "$sha_sum_o" ]
 then
-	echo "File(s) were not chaned"
+	echo "File(s) were not changed"
 else
 	echo "Current crontab file was changed. Please be advised" | mail -s "Crontab Change" root
 	echo "File(s) were changed. Email to root was sent."
